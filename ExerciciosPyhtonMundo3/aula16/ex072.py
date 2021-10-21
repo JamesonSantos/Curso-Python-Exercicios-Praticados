@@ -2,11 +2,11 @@
 contagem por extenso, de zero até vinte. Seu programa deverá ler um número pelo
 teclado (entre 0 e 20) e mostrá-lo por extenso. '''
 
-numeros = ('zero','um','dois','três','quatro','cinco','sei','sete','oito','nove',
+extensos = ('zero','um','dois','três','quatro','cinco','sei','sete','oito','nove',
            'dez','onze','doze','treze','quatorze','quinze','dezesseis','dezessete',
            'dezoito','dezenove','vinte',)
 
-n1 = int(input('Digite um número entre 0 e 20: '))
-if n1 >= 0 and n1 <= 20:
-    print(numeros.index(n1))
-print(c.index(8))
+numero = int(input('Digite um número entre 0 e 20: '))
+while numero not in range(0, 21):
+    numero = int(input('[ERRO] Digite um número entre 0 e 20: '))
+print(f'Você digitou o número {extensos[numero]}')
